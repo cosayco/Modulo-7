@@ -1,2 +1,2 @@
-# Modulo-6
-Evaluaciones Modulo-6 Bootcamp Javascript
+# Modulo-7
+Evaluaciones Modulo-7 Bootcamp Javascript

@@ -1,0 +1,7 @@
+CREATE DATABASE db_bootcamp;
+
+CREATE TABLE IF NOT EXISTS usuario (
+    firstName VARCHAR(100) NOT NULL,
+    lastName VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL);
+

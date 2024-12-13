@@ -1,17 +1,15 @@
 {
-  "name": "app",
+  "name": "clase-15-sesion-11",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "",
+  "main": "consigna.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Carlos Duran",
+  "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "dotenv": "^16.4.7",
     "pg": "^8.13.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.5",

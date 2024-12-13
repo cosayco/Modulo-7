@@ -1,14 +1,9 @@
 module.exports = {
-    HOST: "localhost",
-    USER: "cduran",
-    PASSWORD: "cduran",
-    DB: "db_bootcamp",
-    dialect: "postgres",
-    pool: {
-      max: 5,
-      min: 0,
-      acquire: 30000,
-      idle: 10000
-    }
+    development: {
+      username: "cduran",
+      password: "cduran",
+      database: "db_bootcamp",
+      host: "127.0.0.1",
+      dialect: "postgres",
+    },
   };
-  

@@ -1,27 +1,26 @@
-const db = require('../models/index');
-const User = db.user;
-const Bootcamp = db.bootcamp;
+const { user, bootcamp } = require('../models');
 
-exports.createUser = async (firstName, lastName, email) => {
-    try{
-        return await User.create({ firstName, lastName, email });
+module.exports = {
+  async createUser(data) {
+    return await user.create(data);
+  },
+  async findUserById(id) {
+    return await user.findByPk(id, { include: bootcamp });
+  },
+  async findAll() {
+    return await user.findAll({ include: bootcamp });
+  },
+  async updateUserById(user_id, data) {
+
+  },
+  async deleteUserById(user_id) {
+    try {
+      const userx = await user.findByPk(user_id); 
+      if (!userx) { throw new Error(`user_id: ${user_id} no existe!.`); }     
+      await user.destroy({ where: { id: user_id } });
+      console.log(`Usuario ${userx.firstName} con ID ${user_id} fue eliminado.`);
     } catch(error) {
-        console.error(error.message)
-    }    
-};
-
-exports.findUserById = async (userId) => {
-    return await User.findAll({ where: { id: userId } })
-};
-
-exports.findAll = async () => {
-    return await User.findAll({ include: Bootcamp })
-};
-
-exports.updateUserById = async () => {
-    // Logic to update user by id
-};
-
-exports.deleteUserById = async () => {
-    // Logic to delete user by id
+      console.error(error.message)
+    }
+  }
 };

@@ -34,7 +34,7 @@ async function initializeDatabase() {
         await bootcampController.addUser(bootTres.id, usuarioDos.id);
         await bootcampController.addUser(bootTres.id, usuarioTres.id);
     } catch (error) {
-        console.error('Error initializing database:', error.message);
+        console.error('Error inicializando la base de datos:', error.message);
     }
 }
 

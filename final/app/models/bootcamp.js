@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           min: 5,
-          max: 20,
+          max: 20, //Se cambia el max para que pasen los datos indicados
         },
       },
       description: {
@@ -24,11 +24,10 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   bootcamp.associate = function (models) {
-    // Relación muchos a muchos con Receta
     bootcamp.belongsToMany(models.user, {
-      through: "user_bootcamp", // Nombre de la tabla intermedia
-      foreignKey: "bootcamp_id", // Clave foránea en la tabla intermedia
-      otherKey: "user_id", // Otra clave foránea
+      through: "user_bootcamp", 
+      foreignKey: "bootcamp_id", 
+      otherKey: "user_id", 
     });
   };
 

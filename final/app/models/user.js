@@ -20,9 +20,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   user.associate = function (models) {
-    // Relación muchos a muchos con Receta
     user.belongsToMany(models.bootcamp, {
-      through: "user_bootcamp", // Nombre de la tabla intermedia
+      through: "user_bootcamp", 
       foreignKey: "user_id",
       otherKey: "bootcamp_id",
     });

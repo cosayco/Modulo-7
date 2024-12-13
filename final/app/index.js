@@ -27,5 +27,4 @@ async function main() {
   console.log(EjercicioSeis);
 }
 
-
 main();
